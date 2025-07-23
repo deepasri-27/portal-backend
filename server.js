@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // Import all route modules
 const loginRouter = require('./services/login');
-// const profileRouter = require('./services/profile');
+ const profileRouter = require('./services/profile');
  const goodsRouter = require('./services/goods');
 const memoRouter = require('./services/memo');
  const purchaseRouter = require('./services/purchase');
@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 // Mount all routes with /api prefix
 app.use('/api', loginRouter);
-// app.use('/api', profileRouter);
+ app.use('/api', profileRouter);
  app.use('/api', goodsRouter);
  app.use('/api', memoRouter);
  app.use('/api', purchaseRouter);
