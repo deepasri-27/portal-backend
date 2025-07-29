@@ -11,7 +11,7 @@ const memoRouter = require('./services/memo');
 const agingRouter = require('./services/aging');
 const rfqRouter = require('./services/rfq');
 const invoiceRoutes = require('./services/invoice');
-// const invoicePdfRoute = require('./services/invoicePdf');
+const invoicePdfRoute = require('./services/invoicepdf');
 
 
 const app = express();
@@ -29,7 +29,7 @@ app.use('/api', loginRouter);
 app.use('/api', agingRouter);
 app.use('/api', rfqRouter);
 app.use('/api', invoiceRoutes);
-// app.use('/api', invoicePdfRoute);
+app.use('/api', invoicePdfRoute);
 
 // Start server
 app.listen(PORT, () => {
